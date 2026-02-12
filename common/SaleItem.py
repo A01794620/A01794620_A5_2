@@ -13,6 +13,9 @@
 
 import math
 
+from common.Setting import Setting
+
+
 class SaleItem:
 
     """
@@ -43,8 +46,9 @@ class SaleItem:
 
     def fetch_header(self, page_number=0):
         symbol = "—"
-        symbol_open = "‹"
-        symbol_close = "›"
+        symbol_open = Setting.OPEN_SYMBOL
+        symbol_close = Setting.CLOSE_SYMBOL
+
         break_str = symbol_open + f"Ticket No.{str(page_number).zfill(4)}" + symbol_close
 
         header_str = f"{break_str}\n" \
