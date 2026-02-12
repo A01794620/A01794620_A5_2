@@ -11,19 +11,23 @@
  @Date: 15 February 2026
 """
 
-import math
 
+import math
 from common.Setting import Setting
 
 
+# pylint: disable=too-many-instance-attributes
+# Disabled R0902: Too many instance attributes
 class SaleItem:
-
     """
-    SaleItem. It is a module which holds all features linked to the entity Sale Item.
+    SaleItem. It is a module which holds all features
+    linked to the entity Sale Item.
     The Sale Items are the units for every Sale.
-    A Sale Item has static characteristics as the Sale Date and its unique ID, but also
-    has characteristics that are calculations inputs such the Quantity and the Product
-    Price; which is extracted form the entity Product.
+    A Sale Item has static characteristics as the
+    Sale Date and its unique ID, but also has
+    characteristics that are calculations inputs
+    such the Quantity and the Product Price;
+    which is extracted form the entity Product.
     """
 
     def __init__(self, dict_line):
@@ -37,6 +41,16 @@ class SaleItem:
         return self.fetch_item_str()
 
     def fetch_item_str(self):
+        """
+        Prepare a valid string for either print in
+        screen or write in a file.
+
+        Args:
+
+        Returns:
+        string: valid object string representation.
+        """
+
         return (f"•{self.product:<30}\t"
                 f"{self.unitary_price:.2f}\t"
                 f"{self.quantity:000.0f}\t"
@@ -45,11 +59,20 @@ class SaleItem:
                 "\n")
 
     def fetch_header(self, page_number=0):
-        symbol = "—"
+        """
+        Prepare a valid Header formated string
+        Args:
+            page_number (int): the page tab number for reference.
+            Returns:
+                string: the valid string to be used as header.
+        """
+
+        symbol = Setting.HEAD_SYMBOL
         symbol_open = Setting.OPEN_SYMBOL
         symbol_close = Setting.CLOSE_SYMBOL
 
-        break_str = symbol_open + f"Ticket No.{str(page_number).zfill(4)}" + symbol_close
+        break_str = (symbol_open +
+                     f"Ticket No.{str(page_number).zfill(4)}" + symbol_close)
 
         header_str = f"{break_str}\n" \
                      f"\nSale Code: {self._parent_id}\tDate: {self.date}\n"
@@ -65,13 +88,30 @@ class SaleItem:
 
         return header_str
 
-
     def print_header(self, page_number=0):
+        """
+        Print a valid header formated string
+        Args:
+            page_number (int): the page tab number for reference.
+
+        Returns:
+              void: this methods print in the end-user screen.
+         """
         header_str = self.fetch_header(page_number)
         print(header_str)
 
     @staticmethod
     def fetch_footer(great_total_=0.0, is_great_total_=False):
+        """
+         Prepare and return a valid Footer formated string
+         Args:
+             great_total_ (float): total of the footer.
+             is_great_total_ (boolean): flag to check if the total is
+             great total or not.
+
+             Returns:
+                 string: the valid string to be used as header.
+         """
         symbol = "—"
         prefix = ""
 
@@ -89,11 +129,25 @@ class SaleItem:
 
     @staticmethod
     def print_footer(great_total_=0.0, is_great_total_=False):
+        """
+        Print a valid Footer formated string
+        Args:
+            great_total_ (float): total of the footer.
+            is_great_total_ (boolean): flag to check if the total is
+            great total or not.
+
+            Returns:
+              void: this methods print in the end-user screen.
+        """
         footer_str = SaleItem.fetch_footer(great_total_, is_great_total_)
         print(footer_str)
 
     @property
     def parent_id(self):
+        """
+        Get or set the sale parent to
+        perform sales items groups.
+        """
         return self._parent_id
 
     @parent_id.setter
@@ -104,6 +158,9 @@ class SaleItem:
 
     @property
     def date(self):
+        """
+        Get or set the date of the sale.
+        """
         return f"{self._date}"
 
     @date.setter
@@ -114,6 +171,10 @@ class SaleItem:
 
     @property
     def product(self):
+        """
+        Get or set the product linked to the
+        sale item.
+        """
         return f"{self._product}"
 
     @product.setter
@@ -124,32 +185,35 @@ class SaleItem:
 
     @property
     def quantity(self):
+        """
+        Get or set the quantity of products on the sale item.
+        """
         return self._quantity
 
     @quantity.setter
     def quantity(self, value):
         if math.isnan(value):
             raise ValueError("Quantity must be a number")
-
-        if value < 0:
-            print(f"Quantity must be positive: {self.product } {str(value)}")
-            #print(f"Quantity cannot be negative")
-            #print(f"{self.product } {str(self.quantity)}")
-
-        #print(f"::: Quantity :::{value}")
-
         self._quantity = value
 
     @property
     def unitary_price(self):
+        """
+        Get or set the price of the product
+        linked to the sale item.
+        It might be a numerical value.
+        """
         return self._unitary_price
 
     @unitary_price.setter
     def unitary_price(self, value):
         if math.isnan(value):
-             raise ValueError("Unitary Price must be a number")
-        self._unitary_price= value
+            raise ValueError("Unitary Price must be a number")
+        self._unitary_price = value
 
     @property
     def total(self):
+        """
+        Get the total of the sale item.
+        """
         return self._unitary_price * self._quantity

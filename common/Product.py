@@ -15,10 +15,12 @@
 import math
 
 
+# pylint: disable=too-many-instance-attributes
+# Disabled R0902: Too many instance attributes
 class Product:
-
     """
-    Product. It is a module which handles all features linked to the entity Product.
+    Product. It is a module which handles all features linked
+    to the entity Product.
     The products are the essentials units for the POS system.
     """
 
@@ -45,6 +47,9 @@ class Product:
 
     @property
     def title(self):
+        """
+        Get or set the Title -name- of the product.
+        """
         return f"{self._title}"
 
     @title.setter
@@ -55,6 +60,9 @@ class Product:
 
     @property
     def type(self):
+        """
+        Get or set the Type of the product.
+        """
         return f"{self._type}"
 
     @type.setter
@@ -63,9 +71,11 @@ class Product:
             raise ValueError("Type cannot be empty")
         self._type = value
 
-
     @property
     def description(self):
+        """
+        Get or set the description of the product.
+        """
         return f"{self._description}"
 
     @description.setter
@@ -76,6 +86,9 @@ class Product:
 
     @property
     def filename(self):
+        """
+        Get or set the picture image of the product.
+        """
         return f"{self._filename}"
 
     @filename.setter
@@ -86,6 +99,9 @@ class Product:
 
     @property
     def height(self):
+        """
+        Get or set the height of the product.
+        """
         return f"{self._height}"
 
     @height.setter
@@ -96,6 +112,9 @@ class Product:
 
     @property
     def width(self):
+        """
+        Get or set the width of the product.
+        """
         return f"{self._width}"
 
     @width.setter
@@ -106,6 +125,10 @@ class Product:
 
     @property
     def price(self):
+        """
+        Get or set the price of the product.
+        Price must be a number.
+        """
         return self._price
 
     @price.setter
@@ -116,6 +139,9 @@ class Product:
 
     @property
     def rating(self):
+        """
+        Get or set the rating of the product.
+        """
         return f"{self._rating}"
 
     @rating.setter
