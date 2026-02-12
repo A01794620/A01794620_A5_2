@@ -78,7 +78,7 @@ class JsonManager:
         Parse the context of a plain JSON file.
 
         Args:
-            parser_type (enum): The type of object which will work.
+            parser_type (Literal): The type of object which will work.
             primitive_json_path (string): Path to the folder where
              the file is located.
         Returns:

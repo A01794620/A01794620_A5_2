@@ -18,13 +18,13 @@ from pathlib import Path
 
 _parent_dir = Path(__file__).parent.parent.resolve()
 sys.path.insert(0, str(_parent_dir))
-from common import SaleItem as SaleItemLine
-from common import ParseType as ParseTypeChecker
-from common import JsonManager as JsonHandler
-from common import FileMaster as FileHandler
-from common import Setting as Settings
-from common import TimeManager as TimeMng
-from common.PrinterHelper import PrinterHelper
+from common import SaleItem as SaleItemLine # noqa pylint: disable=wrong-import-position, import-error
+from common import ParseType as ParseTypeChecker # noqa pylint: disable=wrong-import-position, import-error
+from common import JsonManager as JsonHandler # noqa pylint: disable=wrong-import-position, import-error
+from common import FileMaster as FileHandler # noqa pylint: disable=wrong-import-position, import-error
+# from common import Setting as Settings # noqa pylint: disable=wrong-import-position, import-error
+from common import TimeManager as TimeMng # noqa pylint: disable=wrong-import-position, import-error
+from common.PrinterHelper import PrinterHelper # noqa pylint: disable=wrong-import-position, import-error
 
 # Req 1. . The program shall be invoked from a command line.
 #        . The program shall receive two files as parameters.
@@ -52,6 +52,15 @@ from common.PrinterHelper import PrinterHelper
 
 
 def fetch_price(products_, product_title):
+    """
+    Returns the price of the given product.
+    Args:
+        products_ (object[]): List of products stored.
+        product_title (string): product identifier.
+
+    Returns:
+        float: the price of the given product.
+    """
     price = 0.0
     for product in products_:
         if product.title == product_title:
@@ -74,17 +83,20 @@ def data_parser(products_file_path_, sales_file_path_, file_source_name_, init_t
         boolean: It is a procedure of step by step until print/safe results if the process
                  is aborted then False value is returned.
     """
-    products = JsonHandler.JsonManager.json_parser(ParseTypeChecker.ParseType.PRODUCT, products_file_path_)
-    sales = JsonHandler.JsonManager.json_parser(ParseTypeChecker.ParseType.SALE_ITEM, sales_file_path_)
+    products = JsonHandler.JsonManager.json_parser(ParseTypeChecker.ParseType.PRODUCT,
+                                                   products_file_path_)
+
+    sales = JsonHandler.JsonManager.json_parser(ParseTypeChecker.ParseType.SALE_ITEM,
+                                                sales_file_path_)
 
     parse_integrity = True
 
     if  len(products)<=0 or len(sales)<=0:
         parse_integrity = False
 
-    top = Settings.Setting.TOP
-    apply_top = Settings.Setting.APPLY_TOP
-    stop_by_top = False
+    # top = Settings.Setting.TOP
+    # apply_top = Settings.Setting.APPLY_TOP
+    # stop_by_top = False
 
     current_sale = -1
     sale_counter = 0.0
@@ -93,10 +105,10 @@ def data_parser(products_file_path_, sales_file_path_, file_source_name_, init_t
     carrier_result = ""
 
     for sale in sales:
-        top -= 1
+        # top -= 1
 
-        if apply_top and (top <0):
-            stop_by_top = True
+        # if apply_top and (top <0):
+        #     stop_by_top = True
 
         if current_sale != sale.parent_id:
             ticket_counter = ticket_counter + 1
@@ -104,54 +116,53 @@ def data_parser(products_file_path_, sales_file_path_, file_source_name_, init_t
             if current_sale == -1:
                 current_sale = sale.parent_id
 
-                if not stop_by_top:
-                    sale.print_header(ticket_counter)
-                    carrier_result += sale.fetch_header(ticket_counter)
+                #if not stop_by_top:
+                sale.print_header(ticket_counter)
+                carrier_result += sale.fetch_header(ticket_counter)
 
             else:
                 current_sale = sale.parent_id
 
-                if not stop_by_top:
-                    SaleItemLine.SaleItem.print_footer(sale_counter,False)
-                    carrier_result += SaleItemLine.SaleItem.fetch_footer(sale_counter,False)
+                # if not stop_by_top:
+                SaleItemLine.SaleItem.print_footer(sale_counter,False)
+                carrier_result += SaleItemLine.SaleItem.fetch_footer(sale_counter,False)
 
                 sale_counter = 0.0
 
-                if not stop_by_top:
-                    sale.print_header(ticket_counter)
-                    carrier_result += sale.fetch_header(ticket_counter)
+                # if not stop_by_top:
+                sale.print_header(ticket_counter)
+                carrier_result += sale.fetch_header(ticket_counter)
 
         price = fetch_price(products, sale.product)
         sale.unitary_price = price
         sale_counter += sale.total
         great_total +=  sale.total
 
-        if not stop_by_top:
-            print(sale)
-            carrier_result += sale.fetch_item_str()
+        #if not stop_by_top:
+        print(sale)
+        carrier_result += sale.fetch_item_str()
 
     if sale_counter>0.0:
-        if not stop_by_top:
-            SaleItemLine.SaleItem.print_footer(sale_counter, False)
-            carrier_result += SaleItemLine.SaleItem.fetch_footer(sale_counter, False)
+        # if not stop_by_top:
+        SaleItemLine.SaleItem.print_footer(sale_counter, False)
+        carrier_result += SaleItemLine.SaleItem.fetch_footer(sale_counter, False)
     else:
         pass
 
     if parse_integrity:
-        if not stop_by_top:
-            SaleItemLine.SaleItem.print_footer(great_total, True)
-            carrier_result += SaleItemLine.SaleItem.fetch_footer(great_total, True)
+        #if not stop_by_top:
+        SaleItemLine.SaleItem.print_footer(great_total, True)
+        carrier_result += SaleItemLine.SaleItem.fetch_footer(great_total, True)
     else:
-        print("")
+        pass
 
+    execution_time = TimeMng.TimeManager.get_execution_time(init_time_,
+                                                            TimeMng.TimeManager.get_time())
+
+    carrier_result += f"\nElapsed Execution Time: {execution_time:.4f} seconds"
     FileHandler.FileMaster.write_to_file(file_source_name_, carrier_result)
-
     return parse_integrity
 
-"""
- Main stating point.
- The applicative will start running on this section.
-"""
 if __name__ == '__main__':
     init_time = TimeMng.TimeManager.get_time()
     file_path = os.path.abspath(__file__)
