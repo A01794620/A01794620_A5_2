@@ -85,9 +85,10 @@ def data_parser(products_file_path_, sales_file_path_,
 
     Args:
         products_file_path_ (string): Path of the file that
-        contains the product catalog.
+                                      contains the product catalog.
         sales_file_path_ (string): Path of the file that
-        contains the sales list to be computed.
+                                   contains the sales list to be computed.
+        file_source_name_ (string): origin file source name.
         init_time_ (float): Initial execution Timestamp.
 
     Returns:
@@ -157,8 +158,12 @@ def data_parser(products_file_path_, sales_file_path_,
 
     carrier_result += f"\nElapsed Execution Time: {execution_time:.4f} seconds"
     FileHandler.FileMaster.write_to_file(file_source_name_, carrier_result)
-    final_time = TimeMng.TimeManager.get_execution_time(init_time_, TimeMng.TimeManager.get_time())
-    PrinterHelper.print_time_stamp(final_time)
+
+    execution_time = TimeMng.TimeManager.get_execution_time(
+                    init_time_,
+                    TimeMng.TimeManager.get_time())
+
+    PrinterHelper.print_time_stamp(execution_time)
     return parse_integrity
 
 
