@@ -78,3 +78,27 @@ class PrinterHelper:
         print(f"{Fore.MAGENTA}{res_print}")
         res_print = f"{head_}\n"
         print(f"{Fore.RED}{res_print}")
+
+    @staticmethod
+    def print_time_stamp(execution_time, is_final_time_=True):
+        """
+        Print the execution time in the very last moment,
+        after file is stored and results on screen.
+        This elapsed time is wide bigger than the calculation time
+        in the local machine.
+
+            Args:
+                execution_time (float): Execution time registered.
+                is_final_time_ (bool): Flag to either display final time
+                or execution time.
+            Returns:
+                void: System print by console.
+        """
+
+        if is_final_time_:
+            print(f"{Fore.LIGHTWHITE_EX}Elapsed Time after saving " +
+                  "file and listing on screen: " +
+                  f"{execution_time: .4f} seconds\n")
+        else:
+            print(f"{Fore.CYAN}Elapsed Execution Time: " +
+                  f"{execution_time: .4f} seconds\n")
