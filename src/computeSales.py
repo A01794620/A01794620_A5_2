@@ -13,6 +13,7 @@
 
 import sys
 import os
+from getpass import fallback_getpass
 
 from pathlib import Path
 
@@ -108,6 +109,9 @@ def data_parser(products_file_path_, sales_file_path_,
 
     if len(products) <= 0 or len(sales) <= 0:
         parse_integrity = False
+
+    if not parse_integrity:
+        return parse_integrity
 
     current_sale = -1
     sale_counter = 0.0

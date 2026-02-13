@@ -11,6 +11,8 @@
  @Date: 15 February 2026
 """
 
+from colorama import init, Fore
+init(autoreset=True)
 
 import math
 from common.Setting import Setting
@@ -77,7 +79,7 @@ class SaleItem:
         header_str = f"{break_str}\n" \
                      f"\nSale Code: {self._parent_id}\tDate: {self.date}\n"
 
-        header_str += symbol * 70 + "\n"
+        header_str += symbol *  Setting.COL_WIDTH + "\n"
 
         header_str += f"{"Product":<30}\t" \
                       f"{"Price"}\t" \
@@ -110,20 +112,29 @@ class SaleItem:
              great total or not.
 
              Returns:
-                 string: the valid string to be used as header.
+                 string: the valid strinclear
+                 g to be used as header.
          """
-        symbol = "—"
-        prefix = ""
+
+        symbol = Setting.HEAD_SYMBOL
+        prefix = "Ticket Total:"
+        tab_len = 5
+        tab = "\t"
+
+        font_color = f"{Fore.LIGHTWHITE_EX}"
 
         if is_great_total_:
             symbol = "—"
-            prefix = "Great "
+            prefix = "Great Total:"
+            # tab_len -= 1
+            font_color = f"{Fore.CYAN}"
 
-        footer_str = symbol * 70 + "\n"
-        footer_str += f"{prefix}Total:\t\t\t\t\t\t{great_total_:,.2f}\t\n"
+        footer_str = symbol *  Setting.COL_WIDTH + "\n"
+        footer_str += f"{font_color}{prefix}{tab_len * tab}{great_total_:,.2f}\t\n" + \
+                      f"{Fore.WHITE}"
 
         if is_great_total_:
-            footer_str += symbol * 70 + "\n"
+            footer_str += symbol *  Setting.COL_WIDTH + "\n"
 
         return footer_str
 
