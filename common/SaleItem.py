@@ -10,12 +10,11 @@
  @Period . I Trimester 2026
  @Date: 15 February 2026
 """
-
-from colorama import init, Fore
-init(autoreset=True)
-
 import math
+from colorama import init, Fore
 from common.Setting import Setting
+
+init(autoreset=True)
 
 
 # pylint: disable=too-many-instance-attributes
@@ -79,7 +78,7 @@ class SaleItem:
         header_str = f"{break_str}\n" \
                      f"\nSale Code: {self._parent_id}\tDate: {self.date}\n"
 
-        header_str += symbol *  Setting.COL_WIDTH + "\n"
+        header_str += symbol * Setting.COL_WIDTH + "\n"
 
         header_str += f"{"Product":<30}\t" \
                       f"{"Price"}\t" \
@@ -103,13 +102,18 @@ class SaleItem:
         print(header_str)
 
     @staticmethod
-    def fetch_footer(great_total_=0.0, is_great_total_=False):
+    def fetch_footer(
+            great_total_=0.0,
+            is_great_total_=False,
+            is_screen_out=True):
         """
          Prepare and return a valid Footer formated string
          Args:
              great_total_ (float): total of the footer.
              is_great_total_ (boolean): flag to check if the total is
              great total or not.
+             is_screen_out: it depends if the output is screen then use
+             colors, otherwise no.
 
              Returns:
                  string: the valid strinclear
@@ -120,21 +124,25 @@ class SaleItem:
         prefix = "Ticket Total:"
         tab_len = 5
         tab = "\t"
-
         font_color = f"{Fore.LIGHTWHITE_EX}"
 
         if is_great_total_:
             symbol = "—"
             prefix = "Great Total:"
-            # tab_len -= 1
             font_color = f"{Fore.CYAN}"
 
-        footer_str = symbol *  Setting.COL_WIDTH + "\n"
-        footer_str += f"{font_color}{prefix}{tab_len * tab}{great_total_:,.2f}\t\n" + \
-                      f"{Fore.WHITE}"
+        if not is_screen_out:
+            font_color = " "
+
+        footer_str = symbol * Setting.COL_WIDTH + "\n"
+        footer_str += (f"{font_color}{prefix}{tab_len * tab}" +
+                       f"{great_total_:,.2f}\t\n")
+
+        if is_screen_out:
+            footer_str += f"{Fore.WHITE}"
 
         if is_great_total_:
-            footer_str += symbol *  Setting.COL_WIDTH + "\n"
+            footer_str += symbol * Setting.COL_WIDTH + "\n"
 
         return footer_str
 

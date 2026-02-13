@@ -13,8 +13,6 @@
 
 import sys
 import os
-from getpass import fallback_getpass
-
 from pathlib import Path
 
 _parent_dir = Path(__file__).parent.parent.resolve()
@@ -131,7 +129,7 @@ def data_parser(products_file_path_, sales_file_path_,
                 current_sale = sale.parent_id
                 SaleItemLine.SaleItem.print_footer(sale_counter, False)
                 carrier_result += SaleItemLine.SaleItem.fetch_footer(
-                                   sale_counter, False)
+                                   sale_counter, False, False)
                 sale_counter = 0.0
                 sale.print_header(ticket_counter)
                 carrier_result += sale.fetch_header(ticket_counter)
@@ -146,13 +144,14 @@ def data_parser(products_file_path_, sales_file_path_,
     if sale_counter > 0.0:
         SaleItemLine.SaleItem.print_footer(sale_counter, False)
         carrier_result += SaleItemLine.SaleItem.fetch_footer(
-                          sale_counter, False)
+                          sale_counter, False, False)
     else:
         pass
 
     if parse_integrity:
         SaleItemLine.SaleItem.print_footer(great_total, True)
-        carrier_result += SaleItemLine.SaleItem.fetch_footer(great_total, True)
+        carrier_result += SaleItemLine.SaleItem.fetch_footer(
+                          great_total, True, False)
     else:
         pass
 
