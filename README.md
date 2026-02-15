@@ -80,17 +80,18 @@ The Image 2 displays the testing phase in the main solution files, nevertheless 
 
 **Table 2.** Pylint debugging process on miscellaneous classes.
 
-| Class         | Code                                                                                | Class Motive                                                    | First Run                                                                  | Test Passed                                                                |
-|---------------|-------------------------------------------------------------------------------------|-----------------------------------------------------------------|----------------------------------------------------------------------------|----------------------------------------------------------------------------|
-| FileMaster    | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/common/FileMaster.py)    | It handles details about files procedures.                      | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_04.PNG) | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_12.png) |
-| JsonManager   | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/common/JsonManager.py)   | It handles parsing JSON external files.                         | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_05.PNG) | `idem`                                                                     |
-| ParseType     | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/common/ParseType.py)     | Essentials type entities in the POS system.                     | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_06.PNG) | `idem`                                                                     |
-| PrinterHelper | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/common/PrinterHelper.py) | It handles messages to be displayed.                            | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_07.PNG) | `idem`                                                                     |
-| Product       | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/common/Product.py)       | Features linked to the entity Product.                          | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_08.PNG) | `idem`                                                                     |
-| SaleItem      | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/common/SaleItem.py)      | Features linked to the entity Sale Items, units for every Sale. | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_09.PNG) | `idem`                                                                     |
-| Setting       | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/common/Setting.py)       | It handles global constants across modules.                     | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_10.PNG) | `idem`                                                                     |
-| TimeManager   | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/common/TimeManager.py)   | It handles all processes related to Time manipulation.          | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_11.PNG) | `idem`                                                                     |
-| \_\_init\_\_  | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/common/__init__.py)      | Common Package definition.                                      | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_03.PNG) | `idem`                                                                     |
+| Class         | Code                                                                                  | Class Motive                                                    | First Run                                                                  | Test Passed                                                                |
+|---------------|---------------------------------------------------------------------------------------|-----------------------------------------------------------------|----------------------------------------------------------------------------|----------------------------------------------------------------------------|
+| FileMaster    | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/common/FileMaster.py)      | It handles details about files procedures.                      | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_04.PNG) | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_12.png) |
+| JsonManager   | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/common/JsonManager.py)     | It handles parsing JSON external files.                         | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_05.PNG) | `idem`                                                                     |
+| ParseType     | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/common/ParseType.py)       | Essentials type entities in the POS system.                     | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_06.PNG) | `idem`                                                                     |
+| PrinterHelper | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/common/PrinterHelper.py)   | It handles messages to be displayed.                            | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_07.PNG) | `idem`                                                                     |
+| Product       | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/common/Product.py)         | Features linked to the entity Product.                          | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_08.PNG) | `idem`                                                                     |
+| SaleItem      | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/common/SaleItem.py)        | Features linked to the entity Sale Items, units for every Sale. | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_09.PNG) | `idem`                                                                     |
+| Setting       | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/common/Setting.py)         | It handles global constants across modules.                     | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_10.PNG) | `idem`                                                                     |
+| TimeManager   | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/common/TimeManager.py)     | It handles all processes related to Time manipulation.          | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_11.PNG) | `idem`                                                                     |
+| \_\_init\_\_  | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/common/__init__.py)        | Common Package definition.                                      | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_03.PNG) | `idem`                                                                     |
+
 
 Having 10.0 grade was a back-and-forth process, a big learning on how to use test static code tools. 
 
@@ -125,21 +126,23 @@ Then after fixing the inconsistencies, no messages on running Flake 8 command im
 ![ss_14.png](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_14.png)
 _Image 4. Flake8 Test passed in the main deliverable._
 
+On image 4 the [A] section displays the Pylint test passed while the [B] section the Flake8 one on main applicative.
+
 As done in Pylint, the following table summarizes the process of debugging the miscellaneous classes using Flake8. On the matrix the description of the Class column has been dropped as on table 2 the details were given already.
 
 **Table 3.** Flake8 debugging process on miscellaneous classes.
 
-| Class         | First Run                                                                   | Test Passed |
-|---------------|-----------------------------------------------------------------------------|-------------|
-| FileMaster    | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_04.PNG)  |             |
-| JsonManager   |                                                                             |             |
-| ParseType     |                                                                             |             |
-| PrinterHelper |                                                                             |             |
-| Product       |                                                                             |             |
-| SaleItem      |                                                                             |             |
-| Setting       |                                                                             |             |
-| TimeManager   |                                                                             |             |
-| \_\_init\_\_  |                                                                             |             |
+| Class         | First Run                                                                  | Test Passed |
+|---------------|----------------------------------------------------------------------------|-------------|
+| FileMaster    | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_15.PNG) | `idem`      |
+| JsonManager   | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_16.PNG) | `idem`      |
+| ParseType     | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_17.PNG) | `idem`      |
+| PrinterHelper | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_18.PNG) | `idem`      |
+| Product       | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_19.PNG) | `idem`      |
+| SaleItem      | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_20.PNG) | `idem`      |
+| Setting       | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_21.PNG) | `idem`      |
+| TimeManager   | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_22.PNG) | `idem`      |
+| \_\_init\_\_  | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_23.PNG) | `idem`      |
 
 
 ## Test Cases:
