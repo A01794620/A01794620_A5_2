@@ -78,6 +78,8 @@ _Image 2. Pylint test passed in the main deliverable._
 
 The Image 2 displays the testing phase in the main solution files, nevertheless the following table summarize the Pylint debug process on each of the miscellaneous classes for the solution.
 
+**Table 2.** Pylint debugging process on miscellaneous classes.
+
 | Class         | Code                                                                                | Class Motive                                                    | First Run                                                                  | Test Passed                                                                |
 |---------------|-------------------------------------------------------------------------------------|-----------------------------------------------------------------|----------------------------------------------------------------------------|----------------------------------------------------------------------------|
 | FileMaster    | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/common/FileMaster.py)    | It handles details about files procedures.                      | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_04.PNG) | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_12.png) |
@@ -113,7 +115,7 @@ Many of the inconsistencies have fallen onto this list:
 2. Two blanks line spaces before class statement.
 3. And missing white spaces between variable assignations.
 
-The following depiction captures the moment of running flake 8 over the main program.
+The following depiction captures the moment of running Flake8 over the main program.
 
 ![ss_13.png](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_13.png)
 _Image 3. First Flake8 round in the main deliverable._
@@ -123,7 +125,9 @@ Then after fixing the inconsistencies, no messages on running Flake 8 command im
 ![ss_14.png](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_14.png)
 _Image 4. Flake8 Test passed in the main deliverable._
 
-As done in Pylint, the following table summarizes the process of debugging the miscellaneous classes using Flake 8. On the matrix the description of the Class column has been dropped as on table 2 the details were given already.
+As done in Pylint, the following table summarizes the process of debugging the miscellaneous classes using Flake8. On the matrix the description of the Class column has been dropped as on table 2 the details were given already.
+
+**Table 3.** Flake8 debugging process on miscellaneous classes.
 
 | Class         | First Run                                                                   | Test Passed |
 |---------------|-----------------------------------------------------------------------------|-------------|
@@ -137,8 +141,8 @@ As done in Pylint, the following table summarizes the process of debugging the m
 | TimeManager   |                                                                             |             |
 | \_\_init\_\_  |                                                                             |             |
 
-## Test Cases:
 
+## Test Cases:
 The test cases are products of too much of back-and-forth between run, fix and rerun.
 
 Nevertheless, in the end it is possible to obtain and deliver a set of battery test cases.
