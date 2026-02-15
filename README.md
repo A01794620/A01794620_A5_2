@@ -98,10 +98,10 @@ Majority of the issues were related to the following problems:
 2. Missing docstring in functions or in classes. 
 3. Name of the file: by introducing the clause of disable the _C0103_ code check (the snake type of files) the issue was sorted. 
 4. Lines were too long: those were easily fixed by breaking the lines.
-5. In minor degree, but found, the imports conflicts with the common libraries done ad-hoc for the project (Common_Functions); here the strategy of disabling both: wrong-import-position and import-error per line scope fixed the issues.
-6. Some coincidences on functions with too many arguments. Depending on the cases disabling the codes _R0913_ and _R0917_ or in others fixing the big number of parameters.
+5. In minor degree, but found, the imports conflicts with the common libraries done ad-hoc for the project (common package); here the strategy of disabling both: wrong-import-position and import-error per line scope fixed the issues.
+6. Some coincidences on functions with too many arguments. Depending on the cases disabling the codes _R0913_ and _R0917_ or in others fixing the substantial number of parameters.
 
-_A full copy of Pylint results can be found [here](https://github.com/A01794620/A01794620_A5_2/blob/main/results/qa_assess_reports/pylint_final_report.txt)_
+_A full copy of Pylint results after all the modifications can be found [here](https://github.com/A01794620/A01794620_A5_2/blob/main/results/qa_assess_reports/pylint_final_report.txt)_
 
 
 ## Quality Assurance using Flake8.
