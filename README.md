@@ -66,7 +66,7 @@ The initial Run yielded inconsistencies that the investigator must debug, correc
 This image displays the errors found in the first documented run.
 
 <!-- ![pic_pylint_01.png](https://github.com/A01794620/A01794620_A5_2/tree/main/pics/pic_pylint_01.png) -->
-_Image 1. First Pylint round._
+_Image 1. First Pylint round in the main deliverable._
 
 The previous depiction shows the result on the program. 
 
