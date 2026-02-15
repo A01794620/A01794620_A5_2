@@ -7,8 +7,8 @@
 | E-mail                          | A01794620@tec.mx                                           |
 | MNA Class                       | Pruebas de Software y Aseguramiento de la Calidad (TC4017) |
 | **Professors:**                 |                                                            |
-| &nbsp;&nbsp;Professor           | PhD Gerardo Padilla Zárate                                 |
-| &nbsp;&nbsp;Evaluator and Tutor | PhD Daniel Flores Araiza                                   |
+| &nbsp;&nbsp;Professor           | PhD. Gerardo Padilla Zárate                                |
+| &nbsp;&nbsp;Evaluator and Tutor | PhD. Daniel Flores Araiza                                  |
 | Period                          | I Trimester 2026                                           |
 | Date                            | 15/02/20226                                                |
 
@@ -27,7 +27,7 @@ The process of building a valid deliverable is described in the next main steps:
 6.  Fixing inconsistencies and bugs detected by Pylint. 
 7.  Testing using Flake8 analysis tool, under PEP-8 standards.
 8.  Fixing inconsistencies and bugs detected by Flake8.
-9.  Assessing the three solutions by using a battery of tests prepared in advance.
+9.  Assessing the solution by using a battery of tests prepared in advance.
 
 ## Products deliverables.
 
