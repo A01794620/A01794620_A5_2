@@ -29,7 +29,7 @@ The process of building a valid deliverable is described in the next main steps:
 8.  Fixing inconsistencies and bugs detected by Flake8.
 9.  Assessing the solution by using a battery of tests prepared in advance.
 
-## Products deliverables.
+## Product deliverable.
 
 The following deliverable is the main part of the final solution.
 
@@ -39,10 +39,8 @@ Program for the Programming Individual Exercise: 5.2:
 * **Program #1. Computing Sales:** this applicative takes two files:
   * One file containing a database of Products and their specs.
   * One file having the sales performed by those products.
-* The motive of the program is to compile the sales totals using the 
-* information from both the files.
-* There is a calculation yielded from unitary price (taken from 1st file, and 
-* the quantity taken form the second file). 
+* The motive of the program is to compile the sales totals using the information from both files.
+* There is a calculation yielded from unitary price (taken from first file, and the quantity taken form the second file).
 ---
 
 ## Structure of the Project.
