@@ -78,16 +78,17 @@ _Image 2. Pylint test passed._
 
 The Image 2 displays the testing phase in the main solution files, nevertheless the following table summarize the Pylint debug process on each of the miscellaneous classes for the solution.
 
-| Class            | Code                                                                                  | Class Motive | First Run | Test Passed |
-|------------------|---------------------------------------------------------------------------------------|--------------|-----------|-------------|
-| __init__.py      | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/common/__init__.py)        |              |           |             |
-| FileMaster.py    | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/common/FileMaster.py)      |              |           |             |
-| JsonManager.py   | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/common/JsonManager.py)     |              |           |             |
-| ParseType.py     | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/common/ParseType.py)       |              |           |             |
-| PrinterHelper.py | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/common/PrinterHelper.py)   |              |           |             |
-| Product          | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/common/Product__init__.py) |              |           |             |
-| SaleItem         | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/common/SaleIten.py)        |              |           |             |
-| TimeManager      | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/common/TimeManager.py)     |              |           |             |
+| Class            | Code                                                                                | Class Motive                                                    | First Run                                                                       | Test Passed                                                                    |
+|------------------|-------------------------------------------------------------------------------------|-----------------------------------------------------------------|---------------------------------------------------------------------------------|--------------------------------------------------------------------------------|
+| __init__.py      | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/common/__init__.py)      | Common Package definition.                                      | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/common/__init__.py)  | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/common/__init__.py) |
+| FileMaster.py    | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/common/FileMaster.py)    | It handles details about files procedures.                      |                                                                                 |                                                                                |
+| JsonManager.py   | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/common/JsonManager.py)   | It handles parsing JSON external files.                         |                                                                                 |                                                                                |
+| ParseType.py     | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/common/ParseType.py)     | Essentials type entities in the POS system.                     |                                                                                 |                                                                                |
+| PrinterHelper.py | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/common/PrinterHelper.py) | It handles messages to be displayed.                            |                                                                                 |                                                                                |
+| Product          | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/common/Product.py)       | Features linked to the entity Product.                          |                                                                                 |                                                                                |
+| SaleItem         | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/common/SaleIten.py)      | Features linked to the entity Sale Items, units for every Sale. |                                                                                 |                                                                                |
+| Setting          | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/common/Setting.py)       | It handles global constants across modules.                     |                                                                                 |                                                                                |
+| TimeManager      | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/common/TimeManager.py)   | It handles all processes related to Time manipulation.          |                                                                                 |                                                                                |
 
 Having 10.0 grade was a back-and-forth process, a big learning on how to use test static code tools. 
 
