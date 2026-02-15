@@ -65,7 +65,7 @@ The initial Run yielded inconsistencies that the investigator must debug, correc
 
 This image displays the errors found in the first documented run.
 
-<!-- ![pic_pylint_01.png](https://github.com/A01794620/A01794620_A5_2/tree/main/pics/pic_pylint_01.png) -->
+![ss_01.png](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_01.png)
 _Image 1. First Pylint round in the main deliverable._
 
 The previous depiction shows the result on the program. 
@@ -114,7 +114,6 @@ in side the `result` folder, there is granulated fashion display in all the test
 * Test Case 2 report folder [Here](https://github.com/A01794620/A01794620_A5_2/tree/main/results/TC2_Sales_json/)
 * Test Case 3 report folder [Here](https://github.com/A01794620/A01794620_A5_2/tree/main/results/TC3_Sales_json/). 
 
-<!-- ![pic_pylint_01.png](https://github.com/A01794620/A01794620_A5_2/tree/main/pics/pic_pylint_01.png) -->
 _Image 4. Assess cases successful passed on the program._
 
 On Image 4, the [A] side shows a properly parsed file while the [B] zone displays how the program detects few lines
