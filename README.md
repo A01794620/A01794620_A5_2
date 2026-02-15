@@ -134,15 +134,15 @@ As done in Pylint, the following table summarizes the process of debugging the m
 
 | Class         | First Run                                                                  | Test Passed |
 |---------------|----------------------------------------------------------------------------|-------------|
-| FileMaster    | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_15.PNG) | `idem`      |
-| JsonManager   | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_16.PNG) | `idem`      |
-| ParseType     | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_17.PNG) | `idem`      |
-| PrinterHelper | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_18.PNG) | `idem`      |
-| Product       | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_19.PNG) | `idem`      |
-| SaleItem      | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_20.PNG) | `idem`      |
-| Setting       | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_21.PNG) | `idem`      |
-| TimeManager   | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_22.PNG) | `idem`      |
-| \_\_init\_\_  | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_23.PNG) | `idem`      |
+| FileMaster    | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_15.png) | `idem`      |
+| JsonManager   | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_16.png) | `idem`      |
+| ParseType     | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_17.png) | `idem`      |
+| PrinterHelper | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_18.png) | `idem`      |
+| Product       | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_19.png) | `idem`      |
+| SaleItem      | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_20.png) | `idem`      |
+| Setting       | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_21.png) | `idem`      |
+| TimeManager   | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_22.png) | `idem`      |
+| \_\_init\_\_  | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_23.png) | `idem`      |
 
 
 ## Test Cases:
