@@ -71,14 +71,12 @@ _Image 1. First Pylint round in the main deliverable._
 The previous depiction shows the result on the program. 
 
 > [!NOTE]
-> Final run, after fixing inconsistencies and bugs: after several tweaks, the investigator can obtain the grade
-> often pursued, Image 2 shows that moment.
+> Final run, after fixing inconsistencies and bugs: after several tweaks, the investigator can obtain the grade often pursued, Image 2 shows that moment.
 
-<!-- ![pic_pylint_01.png](https://github.com/A01794620/A01794620_A5_2/tree/main/pics/pic_pylint_01.png) -->
+![ss_02.png](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_02.png)
 _Image 2. Pylint test passed._
 
-On Image 2 the [A] section displays the testing phase in the main solution files, while the [B] part is related to
-extended miscellaneous classes.
+The Image 2 displays the testing phase in the main solution files, nevertheless the following table summarize the Pylint debug process on each of the miscellaneous classes for the solution.
 
 Having 10.0 grade was a back-and-forth process, a big learning on how to use test static code tools. 
 
