@@ -41,20 +41,35 @@ class SaleItem:
     def __str__(self):
         return self.fetch_item_str()
 
-    def fetch_item_str(self):
+    def fetch_item_str(self, is_screen_out=True):
         """
         Prepare a valid string for either print in
         screen or write in a file.
 
         Args:
-
+            is_screen_out: it depends if the output is screen then use
+            colors, otherwise no.
         Returns:
         string: valid object string representation.
         """
+        prefix_ = ""
+        postfix_ = ""
+        font_color = ""
 
-        return (f"•{self.product:<30}\t"
+        if is_screen_out:
+            if self.quantity>=1:
+                font_color += f"{Fore.LIGHTBLACK_EX}"
+            else:
+                font_color += f"{Fore.LIGHTRED_EX}"
+        else:
+            if self.quantity<=0:
+                prefix_ = "("
+                postfix_ = ")"
+
+        return (f"{font_color}"
+                f"•{self.product:<30}\t"
                 f"{self.unitary_price:.2f}\t"
-                f"{self.quantity:000.0f}\t"
+                f"{prefix_}{self.quantity:000.0f}{postfix_}\t"
                 f"{self.total:,.2f}\t"
                 f"{"":>1}"
                 "\n")

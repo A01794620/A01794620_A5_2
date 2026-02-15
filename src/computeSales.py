@@ -21,7 +21,6 @@ from common import SaleItem as SaleItemLine # noqa pylint: disable=wrong-import-
 from common import ParseType as ParseTypeChecker # noqa pylint: disable=wrong-import-position, import-error
 from common import JsonManager as JsonHandler # noqa pylint: disable=wrong-import-position, import-error
 from common import FileMaster as FileHandler # noqa pylint: disable=wrong-import-position, import-error
-# from common import Setting as Settings # noqa pylint: disable=wrong-import-position, import-error
 from common import TimeManager as TimeMng # noqa pylint: disable=wrong-import-position, import-error
 from common.PrinterHelper import PrinterHelper # noqa pylint: disable=wrong-import-position, import-error
 
@@ -139,7 +138,7 @@ def data_parser(products_file_path_, sales_file_path_,
         sale_counter += sale.total
         great_total += sale.total
         print(sale)
-        carrier_result += sale.fetch_item_str()
+        carrier_result += sale.fetch_item_str(False)
 
     if sale_counter > 0.0:
         SaleItemLine.SaleItem.print_footer(sale_counter, False)
