@@ -74,7 +74,7 @@ The previous depiction shows the result on the program.
 > Final run, after fixing inconsistencies and bugs: after several tweaks, the investigator can obtain the grade often pursued, Image 2 shows that moment.
 
 ![ss_02.png](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_02.png)
-_Image 2. Pylint test passed._
+_Image 2. Pylint test passed in the main deliverable._
 
 The Image 2 displays the testing phase in the main solution files, nevertheless the following table summarize the Pylint debug process on each of the miscellaneous classes for the solution.
 
@@ -105,7 +105,37 @@ _A full copy of Pylint results after all the modifications can be found [here](h
 
 
 ## Quality Assurance using Flake8.
--- Fill here the details using Flake8
+
+The usage of the static analysis tool Flake8 is similar than using Pylint.
+
+Many of the inconsistencies have fallen onto this list:
+1. Lines too long.
+2. Two blanks line spaces before class statement.
+3. And missing white spaces between variable assignations.
+
+The following depiction captures the moment of running flake 8 over the main program.
+
+![ss_13.png](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_13.png)
+_Image 3. First Flake8 round in the main deliverable._
+
+Then after fixing the inconsistencies, no messages on running Flake 8 command implies that the main applicative has passed.
+
+![ss_14.png](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_14.png)
+_Image 4. Flake8 Test passed in the main deliverable._
+
+As done in Pylint, the following table summarizes the process of debugging the miscellaneous classes using Flake 8. On the matrix the description of the Class column has been dropped as on table 2 the details were given already.
+
+| Class         | First Run                                                                   | Test Passed |
+|---------------|-----------------------------------------------------------------------------|-------------|
+| FileMaster    | [Go](https://github.com/A01794620/A01794620_A5_2/blob/main/pics/ss_04.PNG)  |             |
+| JsonManager   |                                                                             |             |
+| ParseType     |                                                                             |             |
+| PrinterHelper |                                                                             |             |
+| Product       |                                                                             |             |
+| SaleItem      |                                                                             |             |
+| Setting       |                                                                             |             |
+| TimeManager   |                                                                             |             |
+| \_\_init\_\_  |                                                                             |             |
 
 ## Test Cases:
 
